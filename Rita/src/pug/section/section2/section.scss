@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  margin: 105px 40px 40px 135px;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    margin-left: 40px;
+     .item1 {
+       height: auto;
+       padding: 20px;
+       line-height: 30px;
+       border-radius: 10px;
+       background-color: gray;
+      //  background-image: url("../img/sprite/png/card1.png")
+
+
+     }
+     .item2 {
+       background-image: url("../img/sprite/png/card1.png")
+     }
+    
+  }
+}

@@ -1,0 +1,64 @@
+aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 0px 20px 0px 0px;
+    z-index: 99999;
+    .logo {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin: 40px 0 30px;
+        position: relative;
+        z-index: 99999;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 70px;
+            right: -18px;
+            width: 70px;
+            height: 1px;
+            background: #CCCCCC
+        }
+    }
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
+}
+
+.aside-icons {
+    .icons-li {
+        list-style-type: none;
+        &:nth-child(1) {
+            margin-top: 31px;
+        }
+    }
+}
+
+.icon-aside {
+    display: block;
+    background-position: center;
+    background-size: cover cover;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    margin: 15px 0;
+    text-align: center;
+    img {
+        fill: #231F20;
+        opacity: 0.2;
+        &:hover {
+            fill: black;
+            opacity: 1;
+        }
+        &:active {
+            fill: black;
+            opacity: 1;
+        }
+    }
+}

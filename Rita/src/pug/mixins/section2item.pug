@@ -1,0 +1,60 @@
+mixin sectionItem(img ,title, text)
+    -var images = ["../img/sprite/png/card1.png", "../img/sprite/png/card2.png"]
+        div(class=attributes.class)
+            - var imgs = img
+              case imgs
+                when 1
+                  .btns
+                    button hello
+                    button design
+                    button deep
+                  img(src=images[0])
+                when 2
+                  .btn1 
+                    button hello
+                    button desi
+                  img(src=images[1])
+                when 3
+                  .btn2
+                    button hello
+                    button desi
+                when 4
+                  .btn3 
+                    button hello
+                    button design 
+                when 5
+                  .btn3 
+                    button hello
+                    button desi
+                when 6
+                  .btn3 
+                    button hello
+                    button desi
+                when 7
+                  .btn3 
+                    button hello
+                    button desi
+                when 8
+                  .btn3 
+                    button hello
+                    button desi
+                when 9
+                  .btn3 
+                    button hello
+                    button desi 
+                when 10
+                  .btn3 
+                    button hello
+                    button desi
+                when 11
+                  .btn3 
+                    button hello
+                    button desi
+                when 12
+                  .btn3 
+                    button hello
+                    button desi
+            h3= title
+            p= text
+            a(href="#") Detalies
+            
