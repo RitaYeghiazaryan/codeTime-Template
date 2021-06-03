@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #f2f2f2;
+}
+.main {
+	margin: 105px 40px 40px 135px;
+	@include displayFlex;
+	height: 947px;
+	p {
+		line-height: 20px;
+		font-size: 14px;
+		font-family: $dm;
+		font-weight: 400;
+		opacity: 0.4;
+	}
+	h3 {
+		font-family: $dm;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.column {
+	    @include displayFlex;
+		flex-direction: column;
+		margin-right: 20px;
+		grid-gap: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		$themeClasses: (
+			"item1": 208px,
+			"item2": 340px,
+			"item3": 244px,
+			"item4": 244px,
+			"item5": 340px,
+			"item6": 208px,
+			"item7": 320px,
+			"item8": 208px,
+			"item9": 264px,
+			"item10": 208px,
+			"item11": 376px,
+			"item12": 208px,
+		);
+		@each $themeClass, $i in $themeClasses {
+			.#{$themeClass} {
+				height: calcs($i, 947px);
+				width: 326px;
+				padding: 20px;
+				border-radius: 10px;
+				background-color: $color-white;
+				display: flex;
+				flex-direction: column;
+				line-height: 50px;
+			}
+		}
+	}
+	.item5 {
+		background-image: url("../img/sprite/png/castablanca.png");
+
+		.description {
+			@include marginTop(190px);
+			@extend %a
+		}
+	}
+	.item9 {
+		background-image: url("../img/sprite/png/Indianapolis.png");
+		.description {
+			@include marginTop(120px);
+			@extend %a;
+		}
+	}
+	.item11 {
+		background-image: url("../img/sprite/png/loisville.png");
+		.description {
+			@include marginTop(210px);
+			@extend %a;
+		}
+	}
+
+	//Buttons
+	.btnA {
+		background-color: $color-lightpurpule;
+		@extend %button;
+	}
+	.btnB {
+		background-color: $color-apricot;
+		@extend %button;
+	}
+	.btnC {
+		background-color: $color-lightyellow;
+		@extend %button;
+	}
+	.btnD {
+		background-color: $color-lightblue;
+		@extend %button;
+	}
+	.btnE {
+		background-color: $color-lightgreen;
+		@extend %button;
+	}
+}

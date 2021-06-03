@@ -4,3 +4,14 @@
 	height: $height-icon;
 	background: url("../../img/sprite/png");
 }
+
+@mixin marginTop($X){
+	margin-top: $X;
+
+}
+
+@mixin displayFlex(){
+	display: flex;
+	// flex-direction: column;
+	justify-content: space-between;
+}

@@ -1,0 +1,3 @@
+@function calcs($parent,$child){
+    @return ($parent/$child)*100%;
+  }

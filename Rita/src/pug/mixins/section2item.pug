@@ -1,60 +1,86 @@
-mixin sectionItem(img ,title, text)
-    -var images = ["../img/sprite/png/card1.png", "../img/sprite/png/card2.png"]
-        div(class=attributes.class)
+mixin sectionItem(el,img ,title, text)
+    -var images = ["../img/sprite/png/melbourne.png", "../img/sprite/png/kathmandu.png"]
+        div(class=`${el}`)
             - var imgs = img
               case imgs
                 when 1
                   .btns
-                    button hello
-                    button design
-                    button deep
+                    button.btnC Taipei
+                    button.btnB Glasgow
+                    button.btnD Belgrade
                   img(src=images[0])
                 when 2
-                  .btn1 
-                    button hello
-                    button desi
+                  .btns
+                    button.btnA Dogs
+                    button.btnB Behance
                   img(src=images[1])
                 when 3
-                  .btn2
-                    button hello
-                    button desi
+                  .btns
+                    button.btnA Deep
+                    button.btnB Minimal
                 when 4
-                  .btn3 
-                    button hello
-                    button design 
+                  .btns
+                    button Lost
+                    button Designer 
                 when 5
-                  .btn3 
-                    button hello
-                    button desi
+                  .btns
+                    button.btnE Lost
                 when 6
-                  .btn3 
-                    button hello
-                    button desi
+                  .btns 
+                    button.btnA Lost
+                    button.btnB Toronto
+                    button.btnC Green
                 when 7
-                  .btn3 
-                    button hello
-                    button desi
-                when 8
-                  .btn3 
-                    button hello
-                    button desi
+                  .btns
+                    button.btnA Tulsa
+                    button.btnC Columbus
+                    button.btnD Bogotá
                 when 9
-                  .btn3 
-                    button hello
-                    button desi 
+                  .btns
+                    button.btnD Harare
+                    button.btnC Alexandria 
+                    button.btnA Hubble 
                 when 10
-                  .btn3 
-                    button hello
-                    button desi
+                  .btns
+                    button.btnB Lost
+                    button.btnA Designer
                 when 11
-                  .btn3 
-                    button hello
-                    button desi
+                  .btns
+                    button.btnC Mens
                 when 12
-                  .btn3 
-                    button hello
-                    button desi
-            h3= title
-            p= text
-            a(href="#") Detalies
-            
+                  .btns 
+                    button Text
+                    button Khartoum
+                    button Detroit
+                when 13
+                  .btns
+                    button.btnC Milan
+                    button.btnB Edinburgh
+                when 14
+                  .btns
+                    button.btnA Text
+                    button.btnB Khartoum
+                    button.btnC Detroit
+            .description        
+                h3= title
+                p= text
+                a(href="#") Detalies
+mixin image(param,title,text)
+    -var btnsA={btnA: "Lost",btnB: "Toronto", btnE:"Green"}
+    -var btnsB={btn1: "Lost",btn5: "Designer"}
+    -var btnsC={btn7:"Text", btn4:"Khartoum",btnA:"Detroit"}
+        div(class=attributes.class)
+            -var btn=param
+            case btn
+                when 14
+                    each btn, key in btnsA
+                         button(class=`${key}`)= btn
+                when 15
+                    each btn,key in btnsB 
+                        button(class=`${key}`)=btn
+                when 16
+                    each btn,key in btnsC 
+                        button(class=`${key}`)=btn
+            .description 
+               h3=title 
+               p=text

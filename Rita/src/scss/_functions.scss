@@ -1,1 +1,23 @@
 // stylelint-disable no-empty-source
+@import "functions/flex.scss";
+%button{
+	border: none;
+	border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    user-select: none;
+}
+%a{
+    & p {
+        color: $color-white;
+        opacity: 1;
+    }
+    & h3 {
+        color: $color-white;
+    }
+    & a {
+        display: none;
+    }
+}
